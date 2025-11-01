@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f6f7fb;
+  color: #1a1a1a;
+}
+
+.container {
+  width: 100%;
+  padding: 0 80px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.navbar nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.navbar nav a:hover {
+  color: #0d47a1;
+}
+
+.resume-btn {
+  background: #0d47a1;
+  color: white !important;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* HERO SECTION */
+.hero {
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #0d47a1;
+}
+
+.role {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+/* TAG BADGES */
+.tags span {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #e3f2fd;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #0d47a1;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .25s;
+}
+
+.primary {
+  background: #1565c0;
+  color: white;
+}
+
+.primary:hover {
+  background: #0d47a1;
+}
+
+.secondary {
+  border: 2px solid #1565c0;
+  color: #1565c0;
+}
+
+.secondary:hover {
+  background: #e3f2fd;
+}
+
+/* SOCIAL ICONS */
+.social a {
+  font-size: 28px;
+  color: #333;
+  margin-right: 12px;
+  transition: .3s;
+}
+
+.social a:hover {
+  color: #1565c0;
+}
+
+/* PROFILE IMAGE */
+.hero-img img {
+  width: 330px;
+  border-radius: 100%;
+  border: 6px solid white;
+  box-shadow: 0px 8px 30px rgba(0,0,0,.1);
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .container { padding: 0 25px; }
+
+  .hero { flex-direction: column; text-align: center; }
+  
+  .hero-text { max-width: 100%; }
+
+  .hero-img img {
+    margin-top: 30px;
+    width: 220px;
+  }
+}
