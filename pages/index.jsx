@@ -213,33 +213,49 @@ export default function Home() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: "10px",
-              marginBottom: "35px",
+              gap: "12px",
+              marginBottom: "40px",
+              justifyContent: "flex-start",
             }}
           >
             {[
-              "Java",
-              "Node.js",
-              "Python",
-              "Next.js",
+              "Java • Spring Boot • Collections Framework",
+              "Python • FastAPI • Flask",
+              "Node.js • Express.js",
+              "Next.js • React",
               "SQL Server",
               "Redis",
               "Docker",
               "Jenkins",
-              "OPC UA",
-              "Modbus",
+              "Git • GitHub",
             ].map((skill) => (
               <span
                 key={skill}
                 style={{
-                  background: "rgba(255,255,255,0.1)",
-                  padding: "8px 16px",
+                  background:
+                    "linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))",
+                  padding: "10px 18px",
                   borderRadius: 14,
                   fontSize: "0.95rem",
                   fontWeight: 500,
-                  letterSpacing: "0.5px",
                   color: "#eee",
-                  transition: "0.3s",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
+                  transition: "all 0.3s ease",
+                  cursor: "default",
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background =
+                    "linear-gradient(90deg, #ff4081, #ff7b00)";
+                  e.currentTarget.style.transform = "scale(1.08)";
+                  e.currentTarget.style.boxShadow =
+                    "0 0 12px rgba(255, 123, 0, 0.5)";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background =
+                    "linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))";
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow =
+                    "0 2px 6px rgba(0,0,0,0.25)";
                 }}
               >
                 {skill}
@@ -374,746 +390,771 @@ export default function Home() {
         </div>
       </section>
 
-     {/* ✅ PROFESSIONAL SUMMARY */}
-<section
-  style={{
-    padding: "60px 20px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-  <h2
-    style={{
-      color: "#ff4081",
-      fontSize: "1.8rem",
-      fontWeight: 700,
-      marginBottom: "20px",
-      textAlign: "left", // 👈 heading aligned to the left
-      letterSpacing: "0.5px",
-      maxWidth: "950px",
-      margin: "0 auto 20px auto", // keeps alignment left within centered container
-      width: "100%",
-    }}
-  >
-    Professional Summary
-  </h2>
-
-  <p
-    style={{
-      lineHeight: 1.8,
-      color: "#ccc",
-      fontSize: "1rem",
-      textAlign: "justify",
-      margin: "0 auto",
-      width: "100%",
-      maxWidth: "950px",
-      padding: "0 10px",
-      wordBreak: "break-word",
-    }}
-  >
-    I am a <b>Software Engineer</b> with a strong focus on{" "}
-    <b>
-      industrial automation, full-stack development, and real-time system
-      engineering
-    </b>
-    . My core expertise lies in designing{" "}
-    <b>scalable industrial platforms</b> that connect hardware, sensors, and
-    control systems to intelligent web applications for{" "}
-    <b>data visualization, analytics, and process optimization</b>.
-    <br />
-    <br />
-    Over the years, I have worked on projects involving{" "}
-    <b>real-time machine monitoring</b>,{" "}
-    <b>data logging and reporting systems</b>,{" "}
-    <b>automated OEE tracking</b>, and{" "}
-    <b>IoT-based industrial solutions</b>. I specialize in integrating{" "}
-    <b>OPC-UA</b> and <b>Modbus</b> protocols for seamless data acquisition,
-    leveraging technologies like{" "}
-    <b>Node.js, Next.js, Python, SQL Server, Redis, and Docker</b> to build
-    robust, production-grade systems.
-    <br />
-    <br />
-    My development approach emphasizes <b>clean architecture</b>,{" "}
-    <b>microservice-based design</b>, and <b>CI/CD automation</b> using{" "}
-    <b>Jenkins</b> and <b>GitHub Actions</b>. I have hands-on experience in{" "}
-    <b>server-side optimization</b>, <b>REST API development</b>, and{" "}
-    <b>real-time dashboards</b> for industrial insights.
-    <br />
-    <br />
-    With a background in <b>industrial electromechanical systems</b>, I bring a
-    unique blend of <b>domain knowledge</b> and <b>software expertise</b>,
-    enabling me to bridge the gap between hardware and software to deliver
-    reliable, efficient, and intelligent automation solutions.
-  </p>
-</section>
-
-
-{/* ✅ EXPERIENCE */}
-<section
-  id="experience"
-  style={{
-    padding: "60px 20px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-  <h2
-    style={{
-      color: "#ff4081",
-      fontSize: "1.8rem",
-      fontWeight: 700,
-      marginBottom: "20px",
-      textAlign: "left",
-      letterSpacing: "0.5px",
-      maxWidth: "950px",
-      margin: "0 auto 25px auto",
-      width: "100%",
-    }}
-  >
-    Experience
-  </h2>
-
-  <div
-    style={{
-      maxWidth: "950px",
-      margin: "0 auto",
-      padding: "0 10px",
-    }}
-  >
-    <h3
-      style={{
-        color: "#fff",
-        fontSize: "1.25rem",
-        fontWeight: 600,
-        marginBottom: "6px",
-      }}
-    >
-      Software Engineer — Orbittal Electromech Eng Projects Pvt. Ltd.
-    </h3>
-    <p
-      style={{
-        color: "#aaa",
-        marginBottom: "20px",
-        fontSize: "0.95rem",
-      }}
-    >
-      Jan 2024 – Present | Pune, India
-    </p>
-
-    <ul
-      style={{
-        color: "#ccc",
-        lineHeight: 1.8,
-        fontSize: "1rem",
-        listStyleType: "disc",
-        paddingLeft: "22px",
-        margin: 0,
-      }}
-    >
-      <li>
-        Designed and developed{" "}
-        <b>real-time industrial monitoring platforms</b> for machine status
-        tracking, downtime analysis, and <b>OEE performance optimization</b>.
-      </li>
-      <li>
-        Built modular web systems using <b>Next.js, Node.js, and Express</b>,
-        integrating with backend APIs for{" "}
-        <b>QC checklists, pack validation, and production data management</b>.
-      </li>
-      <li>
-        Implemented seamless communication between edge devices and web servers
-        via <b>OPC-UA</b> and <b>Modbus</b> protocols, ensuring high-frequency
-        data acquisition and process automation.
-      </li>
-      <li>
-        Created <b>microservice-based APIs</b> for data validation, machine
-        interlock control, and vision inspection integration, improving
-        reliability of production line systems.
-      </li>
-      <li>
-        Engineered dynamic UI dashboards using <b>Material UI</b> and{" "}
-        <b>TanStack Table</b> for interactive checklist editing, live status
-        display, and operator feedback mechanisms.
-      </li>
-      <li>
-        Automated build and deployment workflows with <b>Jenkins</b> and{" "}
-        <b>Docker</b>, enabling <b>zero-downtime CI/CD</b> and environment
-        consistency across testing and production servers.
-      </li>
-      <li>
-        Improved data throughput by implementing <b>Redis caching</b> and{" "}
-        <b>MSSQL query optimization</b>, reducing API latency and improving
-        system performance in multi-line environments.
-      </li>
-      <li>
-        Developed <b>cell scanning</b> and <b>pack start systems</b> with
-        real-time validation, barcode scanning, and{" "}
-        <b>SweetAlert2 feedback workflows</b> for enhanced operator UX.
-      </li>
-      <li>
-        Collaborated with cross-functional teams to align{" "}
-        <b>software logic with industrial automation requirements</b>, ensuring
-        integration with PLCs, sensors, and MES-level systems.
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-{/* ✅ PROJECTS */}
-<section
-  id="projects"
-  style={{
-    padding: "60px 20px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-  <h2
-    style={{
-      color: "#ff4081",
-      fontSize: "1.8rem",
-      fontWeight: 700,
-      marginBottom: "30px",
-      textAlign: "left",
-      letterSpacing: "0.5px",
-      maxWidth: "950px",
-      margin: "0 auto 25px auto",
-      width: "100%",
-    }}
-  >
-    Projects
-  </h2>
-
-  {[
-    {
-      title: "Braiding Monitoring System",
-      desc: `Developed a robust, real-time industrial monitoring platform to track and analyze braiding machine operations, improving overall equipment efficiency and minimizing downtime.`,
-      features: [
-        "Web-Based Monitoring Dashboard: Displays live data for all machines in a centralized UI.",
-        "Real-Time Metrics: Tracks machine run hours, spool targets, and current running spool lengths.",
-        "Spool Target Management: Automatically resets spool length upon reaching target, reducing manual intervention.",
-        "Line & Machine-Level Tracking: Provides performance analytics line-wise, machine-wise, and construction-wise.",
-        "Automated Data Reset: Ensures data accuracy by resetting counters automatically.",
-        "OEE Reporting: Generates daily, weekly, and monthly performance reports for production insights.",
-      ],
-      tech: "Node.js, SQL Server, Redis, Modbus, Next.js, Express.js",
-    },
-    {
-      title: "Data Logger System",
-      desc: `Engineered a real-time data acquisition and monitoring system tailored for industrial environments to collect, visualize, and analyze sensor data.`,
-      features: [
-        "Real-Time Sensor Integration: Captures continuous readings from temperature and pressure sensors.",
-        "Data Logging: Stores sensor readings at defined intervals for historical trend analysis.",
-        "Live Monitoring Dashboard: Provides instant visualization of sensor values with auto-refresh.",
-        "Alert System: Sends automatic email notifications when parameters exceed defined thresholds.",
-        "Automated Reporting: Exports logs in PDF and Excel formats for audits and review.",
-      ],
-      tech: "Python, OPC-UA, MSSQL, React, Pandas, FastAPI",
-    },
-    {
-      title: "AUM (Audio Unique Measurement)",
-      desc: `Designed an advanced audio recognition and comparison tool for industrial sound pattern validation and component quality assurance.`,
-      features: [
-        "Live Audio Capture: Records real-time sound input from connected microphones.",
-        "Pattern Matching: Compares captured audio against reference audio samples.",
-        "Uniqueness Validation: Provides instant results on match accuracy and deviations.",
-        "Industrial Use Case: Ideal for sound-based component inspection and process validation.",
-      ],
-      tech: "Python, OpenCV, NumPy, Flask, React",
-    },
-    {
-      title: "CAN – Compare & Analyze",
-      desc: `Developed a smart data comparison and master verification tool to enhance data integrity across production systems.`,
-      features: [
-        "File Comparison Engine: Detects differences between master and live datasets.",
-        "Master Verification: Validates real-time data consistency before system synchronization.",
-        "Excel-Based Reporting: Generates easy-to-read Excel summaries for QC teams.",
-        "Cross-Platform Support: Runs across different systems using Node.js backend and Python scripts.",
-      ],
-      tech: "Java, Python, Node.js, ExcelJS, SQL Server",
-    },
-    {
-      title: "Online Grain Market Platform",
-      desc: `Developed a full-stack digital marketplace for real-time grain trading and price monitoring, empowering farmers and traders with data transparency.`,
-      features: [
-        "Real-Time Market Data: Displays up-to-date grain prices by region.",
-        "User-Friendly Interface: Simplifies viewing, comparing, and tracking commodity prices.",
-        "Bidding System: Enables farmers and traders to place bids with live acceptance updates.",
-        "Order Management: Tracks complete order lifecycle from bid to dispatch.",
-        "Admin Dashboard: Provides control for managing listings, users, and analytics.",
-        "Secure Login: Implements role-based authentication for traders, farmers, and admins.",
-      ],
-      tech: "Next.js, MySQL, Node.js, Tailwind CSS, Express.js",
-    },
-  ].map((proj) => (
-    <div
-      key={proj.title}
-      style={{
-        background: "rgba(255,255,255,0.08)",
-        borderRadius: 16,
-        padding: "25px 28px",
-        margin: "0 auto 35px auto",
-        maxWidth: "950px",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
-        backdropFilter: "blur(8px)",
-        transition: "all 0.35s ease",
-      }}
-      onMouseOver={(e) => {
-        e.currentTarget.style.transform = "translateY(-6px)";
-        e.currentTarget.style.boxShadow = "0 10px 25px rgba(255,123,0,0.3)";
-      }}
-      onMouseOut={(e) => {
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.3)";
-      }}
-    >
-      <h3
+      {/* ✅ PROFESSIONAL SUMMARY */}
+      <section
         style={{
-          color: "#ff7b00",
-          fontSize: "1.25rem",
-          marginBottom: "10px",
-          fontWeight: 600,
+          padding: "60px 20px",
+          width: "100%",
+          boxSizing: "border-box",
         }}
       >
-        {proj.title}
-      </h3>
+        <h2
+          style={{
+            color: "#ff4081",
+            fontSize: "1.8rem",
+            fontWeight: 700,
+            marginBottom: "20px",
+            textAlign: "left", // 👈 heading aligned to the left
+            letterSpacing: "0.5px",
+            maxWidth: "950px",
+            margin: "0 auto 20px auto", // keeps alignment left within centered container
+            width: "100%",
+          }}
+        >
+          Professional Summary
+        </h2>
 
-      <p
+        <p
+          style={{
+            lineHeight: 1.8,
+            color: "#ccc",
+            fontSize: "1rem",
+            textAlign: "justify",
+            margin: "0 auto",
+            width: "100%",
+            maxWidth: "950px",
+            padding: "0 10px",
+            wordBreak: "break-word",
+          }}
+        >
+          I am a <b>Software Engineer</b> with a strong focus on{" "}
+          <b>
+            industrial automation, full-stack development, and real-time system
+            engineering
+          </b>
+          . My core expertise lies in designing{" "}
+          <b>scalable industrial platforms</b> that connect hardware, sensors,
+          and control systems to intelligent web applications for{" "}
+          <b>data visualization, analytics, and process optimization</b>.
+          <br />
+          <br />
+          Over the years, I have worked on projects involving{" "}
+          <b>real-time machine monitoring</b>,{" "}
+          <b>data logging and reporting systems</b>,{" "}
+          <b>automated OEE tracking</b>, and{" "}
+          <b>IoT-based industrial solutions</b>. I specialize in integrating{" "}
+          <b>OPC-UA</b> and <b>Modbus</b> protocols for seamless data
+          acquisition, leveraging technologies like{" "}
+          <b>Node.js, Next.js, Python, SQL Server, Redis, and Docker</b> to
+          build robust, production-grade systems.
+          <br />
+          <br />
+          My development approach emphasizes <b>clean architecture</b>,{" "}
+          <b>microservice-based design</b>, and <b>CI/CD automation</b> using{" "}
+          <b>Jenkins</b> and <b>GitHub Actions</b>. I have hands-on experience
+          in <b>server-side optimization</b>, <b>REST API development</b>, and{" "}
+          <b>real-time dashboards</b> for industrial insights.
+          <br />
+          <br />
+          With a background in <b>industrial electromechanical systems</b>, I
+          bring a unique blend of <b>domain knowledge</b> and{" "}
+          <b>software expertise</b>, enabling me to bridge the gap between
+          hardware and software to deliver reliable, efficient, and intelligent
+          automation solutions.
+        </p>
+      </section>
+
+      {/* ✅ EXPERIENCE */}
+      <section
+        id="experience"
         style={{
-          color: "#ccc",
-          lineHeight: 1.7,
-          marginBottom: "12px",
-          fontSize: "1rem",
-          textAlign: "justify",
+          padding: "60px 20px",
+          width: "100%",
+          boxSizing: "border-box",
         }}
       >
-        {proj.desc}
-      </p>
+        <h2
+          style={{
+            color: "#ff4081",
+            fontSize: "1.8rem",
+            fontWeight: 700,
+            marginBottom: "20px",
+            textAlign: "left",
+            letterSpacing: "0.5px",
+            maxWidth: "950px",
+            margin: "0 auto 25px auto",
+            width: "100%",
+          }}
+        >
+          Experience
+        </h2>
 
-      <ul
+        <div
+          style={{
+            maxWidth: "950px",
+            margin: "0 auto",
+            padding: "0 10px",
+          }}
+        >
+          <h3
+            style={{
+              color: "#fff",
+              fontSize: "1.25rem",
+              fontWeight: 600,
+              marginBottom: "6px",
+            }}
+          >
+            Software Engineer — Orbittal Electromech Eng Projects Pvt. Ltd.
+          </h3>
+          <p
+            style={{
+              color: "#aaa",
+              marginBottom: "20px",
+              fontSize: "0.95rem",
+            }}
+          >
+            Jan 2024 – Present | Pune, India
+          </p>
+
+          <ul
+            style={{
+              color: "#ccc",
+              lineHeight: 1.8,
+              fontSize: "1rem",
+              listStyleType: "disc",
+              paddingLeft: "22px",
+              margin: 0,
+            }}
+          >
+            <li>
+              Designed and developed{" "}
+              <b>real-time industrial monitoring platforms</b> for machine
+              status tracking, downtime analysis, and{" "}
+              <b>OEE performance optimization</b>.
+            </li>
+            <li>
+              Built modular web systems using{" "}
+              <b>Next.js, Node.js, and Express</b>, integrating with backend
+              APIs for{" "}
+              <b>
+                QC checklists, pack validation, and production data management
+              </b>
+              .
+            </li>
+            <li>
+              Implemented seamless communication between edge devices and web
+              servers via <b>OPC-UA</b> and <b>Modbus</b> protocols, ensuring
+              high-frequency data acquisition and process automation.
+            </li>
+            <li>
+              Created <b>microservice-based APIs</b> for data validation,
+              machine interlock control, and vision inspection integration,
+              improving reliability of production line systems.
+            </li>
+            <li>
+              Engineered dynamic UI dashboards using <b>Material UI</b> and{" "}
+              <b>TanStack Table</b> for interactive checklist editing, live
+              status display, and operator feedback mechanisms.
+            </li>
+            <li>
+              Automated build and deployment workflows with <b>Jenkins</b> and{" "}
+              <b>Docker</b>, enabling <b>zero-downtime CI/CD</b> and environment
+              consistency across testing and production servers.
+            </li>
+            <li>
+              Improved data throughput by implementing <b>Redis caching</b> and{" "}
+              <b>MSSQL query optimization</b>, reducing API latency and
+              improving system performance in multi-line environments.
+            </li>
+            <li>
+              Developed <b>cell scanning</b> and <b>pack start systems</b> with
+              real-time validation, barcode scanning, and{" "}
+              <b>SweetAlert2 feedback workflows</b> for enhanced operator UX.
+            </li>
+            <li>
+              Collaborated with cross-functional teams to align{" "}
+              <b>software logic with industrial automation requirements</b>,
+              ensuring integration with PLCs, sensors, and MES-level systems.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ✅ PROJECTS */}
+      <section
+        id="projects"
         style={{
-          color: "#bbb",
-          lineHeight: 1.6,
-          fontSize: "0.95rem",
-          paddingLeft: "20px",
-          marginBottom: "12px",
+          padding: "60px 20px",
+          width: "100%",
+          boxSizing: "border-box",
         }}
       >
-        {proj.features.map((f, i) => (
-          <li key={i}>{f}</li>
+        <h2
+          style={{
+            color: "#ff4081",
+            fontSize: "1.8rem",
+            fontWeight: 700,
+            marginBottom: "30px",
+            textAlign: "left",
+            letterSpacing: "0.5px",
+            maxWidth: "950px",
+            margin: "0 auto 25px auto",
+            width: "100%",
+          }}
+        >
+          Projects
+        </h2>
+
+        {[
+          {
+            title: "Braiding Monitoring System",
+            desc: `Developed a robust, real-time industrial monitoring platform to track and analyze braiding machine operations, improving overall equipment efficiency and minimizing downtime.`,
+            features: [
+              "Web-Based Monitoring Dashboard: Displays live data for all machines in a centralized UI.",
+              "Real-Time Metrics: Tracks machine run hours, spool targets, and current running spool lengths.",
+              "Spool Target Management: Automatically resets spool length upon reaching target, reducing manual intervention.",
+              "Line & Machine-Level Tracking: Provides performance analytics line-wise, machine-wise, and construction-wise.",
+              "Automated Data Reset: Ensures data accuracy by resetting counters automatically.",
+              "OEE Reporting: Generates daily, weekly, and monthly performance reports for production insights.",
+            ],
+            tech: "Node.js, SQL Server, Redis, Modbus, Next.js, Express.js",
+          },
+          {
+            title: "Data Logger System",
+            desc: `Engineered a real-time data acquisition and monitoring system tailored for industrial environments to collect, visualize, and analyze sensor data.`,
+            features: [
+              "Real-Time Sensor Integration: Captures continuous readings from temperature and pressure sensors.",
+              "Data Logging: Stores sensor readings at defined intervals for historical trend analysis.",
+              "Live Monitoring Dashboard: Provides instant visualization of sensor values with auto-refresh.",
+              "Alert System: Sends automatic email notifications when parameters exceed defined thresholds.",
+              "Automated Reporting: Exports logs in PDF and Excel formats for audits and review.",
+            ],
+            tech: "Python, OPC-UA, MSSQL, React, Pandas, FastAPI",
+          },
+          {
+            title: "AUM (Audio Unique Measurement)",
+            desc: `Designed an advanced audio recognition and comparison tool for industrial sound pattern validation and component quality assurance.`,
+            features: [
+              "Live Audio Capture: Records real-time sound input from connected microphones.",
+              "Pattern Matching: Compares captured audio against reference audio samples.",
+              "Uniqueness Validation: Provides instant results on match accuracy and deviations.",
+              "Industrial Use Case: Ideal for sound-based component inspection and process validation.",
+            ],
+            tech: "Python, OpenCV, NumPy, Flask, React",
+          },
+          {
+            title: "CAN – Compare & Analyze",
+            desc: `Developed a smart data comparison and master verification tool to enhance data integrity across production systems.`,
+            features: [
+              "File Comparison Engine: Detects differences between master and live datasets.",
+              "Master Verification: Validates real-time data consistency before system synchronization.",
+              "Excel-Based Reporting: Generates easy-to-read Excel summaries for QC teams.",
+              "Cross-Platform Support: Runs across different systems using Node.js backend and Python scripts.",
+            ],
+            tech: "Java, Python, Node.js, ExcelJS, SQL Server",
+          },
+          {
+            title: "Online Grain Market Platform",
+            desc: `Developed a full-stack digital marketplace for real-time grain trading and price monitoring, empowering farmers and traders with data transparency.`,
+            features: [
+              "Real-Time Market Data: Displays up-to-date grain prices by region.",
+              "User-Friendly Interface: Simplifies viewing, comparing, and tracking commodity prices.",
+              "Bidding System: Enables farmers and traders to place bids with live acceptance updates.",
+              "Order Management: Tracks complete order lifecycle from bid to dispatch.",
+              "Admin Dashboard: Provides control for managing listings, users, and analytics.",
+              "Secure Login: Implements role-based authentication for traders, farmers, and admins.",
+            ],
+            tech: "Next.js, MySQL, Node.js, Tailwind CSS, Express.js",
+          },
+        ].map((proj) => (
+          <div
+            key={proj.title}
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              borderRadius: 16,
+              padding: "25px 28px",
+              margin: "0 auto 35px auto",
+              maxWidth: "950px",
+              boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+              backdropFilter: "blur(8px)",
+              transition: "all 0.35s ease",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "translateY(-6px)";
+              e.currentTarget.style.boxShadow =
+                "0 10px 25px rgba(255,123,0,0.3)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.3)";
+            }}
+          >
+            <h3
+              style={{
+                color: "#ff7b00",
+                fontSize: "1.25rem",
+                marginBottom: "10px",
+                fontWeight: 600,
+              }}
+            >
+              {proj.title}
+            </h3>
+
+            <p
+              style={{
+                color: "#ccc",
+                lineHeight: 1.7,
+                marginBottom: "12px",
+                fontSize: "1rem",
+                textAlign: "justify",
+              }}
+            >
+              {proj.desc}
+            </p>
+
+            <ul
+              style={{
+                color: "#bbb",
+                lineHeight: 1.6,
+                fontSize: "0.95rem",
+                paddingLeft: "20px",
+                marginBottom: "12px",
+              }}
+            >
+              {proj.features.map((f, i) => (
+                <li key={i}>{f}</li>
+              ))}
+            </ul>
+
+            <p
+              style={{
+                fontSize: "0.9rem",
+                color: "#aaa",
+                fontStyle: "italic",
+              }}
+            >
+              <b>Tech Stack:</b> {proj.tech}
+            </p>
+          </div>
         ))}
-      </ul>
+      </section>
 
-      <p
+      {/* ✅ TECHNICAL SKILLS */}
+      <section
+        id="skills"
         style={{
-          fontSize: "0.9rem",
-          color: "#aaa",
-          fontStyle: "italic",
+          padding: "60px 20px",
+          width: "100%",
+          boxSizing: "border-box",
         }}
       >
-        <b>Tech Stack:</b> {proj.tech}
-      </p>
-    </div>
-  ))}
-</section>
-
-
-{/* ✅ TECHNICAL SKILLS */}
-<section
-  id="skills"
-  style={{
-    padding: "60px 20px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-  <h2
-    style={{
-      color: "#ff4081",
-      fontSize: "1.8rem",
-      fontWeight: 700,
-      marginBottom: "25px",
-      textAlign: "left",
-      maxWidth: "950px",
-      margin: "0 auto 25px auto",
-      width: "100%",
-    }}
-  >
-    Technical Skills
-  </h2>
-
-  <div
-    style={{
-      background: "rgba(255,255,255,0.06)",
-      borderRadius: 16,
-      padding: "25px 28px",
-      margin: "0 auto",
-      maxWidth: "950px",
-      boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
-      backdropFilter: "blur(8px)",
-      transition: "all 0.3s ease",
-    }}
-  >
-    <ul
-      style={{
-        color: "#ccc",
-        lineHeight: 1.8,
-        fontSize: "1rem",
-        listStyleType: "disc",
-        paddingLeft: "22px",
-      }}
-    >
-      <li style={{ marginBottom: "15px" }}>
-        <b>Programming Languages:</b> Java, JavaScript (ES6+), TypeScript,
-        Python, SQL, Bash
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Strong command over backend logic, API development, and real-time data
-          processing.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>Frameworks & Libraries:</b> Next.js, Express.js, React, Node.js,
-        FastAPI, Flask, Material UI
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Experienced in developing high-performance full-stack web applications
-          with reusable components and modular architecture.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>Databases:</b> Microsoft SQL Server, MySQL, Redis, PostgreSQL,
-        SQLite
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Skilled in writing optimized SQL queries, designing schemas, and
-          managing caching & replication for high-volume data systems.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>DevOps & Tools:</b> Docker, Jenkins, GitHub CI/CD, PM2, Nginx,
-        Postman, VS Code
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Hands-on experience with containerization, continuous integration, and
-          automated deployment pipelines for microservices and industrial apps.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>Industrial & IoT Technologies:</b> OPC-UA, Modbus (TCP/RTU), MQTT,
-        SCADA Systems, Industrial Data Logging
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Expertise in connecting industrial sensors, PLCs, and controllers to
-          cloud & local systems for real-time analytics and control.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>Cloud & Hosting:</b> AWS EC2, Azure, DigitalOcean, Vercel, Render
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Experience deploying and maintaining full-stack apps in cloud
-          environments with scalable architecture.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>System Design & Architecture:</b> Microservices, API Gateway, Event
-        Streaming, Message Queues
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Designed robust data pipelines for real-time machine monitoring and
-          reporting applications.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "15px" }}>
-        <b>Testing & Quality:</b> Jest, Mocha, Postman API Testing, Unit & E2E
-        Testing
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Focused on ensuring reliable, maintainable, and well-tested backend
-          services and UI flows.
-        </span>
-      </li>
-
-      <li style={{ marginBottom: "5px" }}>
-        <b>Other Core Competencies:</b> REST API Design, Real-time Data
-        Processing, System Integration, Automation Workflows, Performance
-        Tuning, Security Hardening, Reporting Automation
-        <br />
-        <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
-          Adept at bridging industrial automation with modern software systems
-          to deliver smart, connected manufacturing solutions.
-        </span>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-{/* ✅ EDUCATION */}
-<section
-  id="education"
-  style={{
-    padding: "60px 20px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-  <h2
-    style={{
-      color: "#ff4081",
-      fontSize: "1.8rem",
-      fontWeight: 700,
-      marginBottom: "25px",
-      textAlign: "left",
-      maxWidth: "950px",
-      margin: "0 auto 25px auto",
-      width: "100%",
-    }}
-  >
-    Education
-  </h2>
-
-  <div
-    style={{
-      color: "#ccc",
-      lineHeight: 1.9,
-      fontSize: "1rem",
-      maxWidth: "950px",
-      margin: "0 auto",
-    }}
-  >
-    {/* 🎓 MCA */}
-    <div
-      style={{
-        background: "rgba(255,255,255,0.06)",
-        borderRadius: 16,
-        padding: "25px 28px",
-        marginBottom: "30px",
-        boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
-        backdropFilter: "blur(8px)",
-        transition: "all 0.3s ease",
-      }}
-    >
-      <h3
-        style={{
-          color: "#ff7b00",
-          marginBottom: "5px",
-          fontSize: "1.2rem",
-          fontWeight: 600,
-        }}
-      >
-        🎓 Master in Computer Applications (MCA)
-      </h3>
-      <p style={{ margin: "5px 0 15px 0", color: "#bbb" }}>
-        Sinhgad Institute of Management, Pune (Savitribai Phule Pune University) —{" "}
-        <b>2021 – 2023</b>
-      </p>
-
-      <ul style={{ paddingLeft: "20px", listStyleType: "disc" }}>
-        <li>
-          Graduated with <b>First Class with Distinction</b> — Top 5% in the batch.
-        </li>
-        <li>
-          Specialized in <b>Software Engineering</b>, <b>Database Management</b>,
-          and <b>Full-Stack Web Development</b>.
-        </li>
-        <li>
-          Built advanced real-time and data-driven applications integrating
-          industrial protocols and web technologies.
-        </li>
-
-        {/* 🔹 Project 1 */}
-        <li>
-          <b>Major Project 1 – Online Grain Market Platform:</b> Designed and developed
-          a full-stack web platform for farmers and traders to buy, sell, and monitor
-          grain prices in real time.
-          <ul style={{ marginTop: "6px", paddingLeft: "25px", color: "#aaa" }}>
-            <li>Dynamic bidding system with live market data updates.</li>
-            <li>Admin dashboard for product management and analytics.</li>
-            <li>Secure user authentication and order lifecycle tracking.</li>
-            <li>
-              Built using <b>React, Java, MySQL, and Tailwind CSS</b>.
-            </li>
-          </ul>
-        </li>
-
-        {/* 🔹 Project 2 */}
-        <li>
-          <b>Major Project 2 – Online News24 Portal:</b> Developed a multi-user content
-          management and news publishing system.
-          <ul style={{ marginTop: "6px", paddingLeft: "25px", color: "#aaa" }}>
-            <li>Role-based admin and editor dashboards for news publishing.</li>
-            <li>Real-time updates and category-based filtering.</li>
-            <li>Integrated media upload and article management tools.</li>
-            <li>
-              Developed using <b>Python, HTML, CSS, and MySQL</b>.
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    {/* 🎓 BCA */}
-    <div
-      style={{
-        background: "rgba(255,255,255,0.06)",
-        borderRadius: 16,
-        padding: "25px 28px",
-        boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
-        backdropFilter: "blur(8px)",
-        transition: "all 0.3s ease",
-      }}
-    >
-      <h3
-        style={{
-          color: "#ff7b00",
-          marginBottom: "5px",
-          fontSize: "1.2rem",
-          fontWeight: 600,
-        }}
-      >
-        🎓 Bachelor of Computer Applications (BCA)
-      </h3>
-      <p style={{ margin: "5px 0 15px 0", color: "#bbb" }}>
-        K.R.T. Arts, B.H. Commerce and A.M. Science (KTHM) College, Nashik
-        (Savitribai Phule Pune University) — <b>2018 – 2021</b>
-      </p>
-
-      <ul style={{ paddingLeft: "20px", listStyleType: "disc" }}>
-        <li>
-          Graduated with <b>Distinction</b>, specializing in programming,
-          database management, and computer networks.
-        </li>
-        <li>
-          Final Year Project: <b>Real-time Industrial Control Dashboard</b> using
-          Python and Modbus for industrial data acquisition and visualization.
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-{/* ✅ CONTACT / FOOTER */}
-<section
-  id="contact"
-  style={{
-    padding: "60px 0 30px",
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-    background: "linear-gradient(180deg, #0b0b0b, #111)",
-    textAlign: "left",
-  }}
->
-  <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 20px" }}>
-    <h2
-      style={{
-        color: "#ff4081",
-        fontSize: "1.7rem",
-        fontWeight: 700,
-        marginBottom: "25px",
-        textAlign: "left",
-      }}
-    >
-      Contact Information
-    </h2>
-
-    <p
-      style={{
-        color: "#ccc",
-        lineHeight: 1.8,
-        fontSize: "1rem",
-        marginBottom: "30px",
-        maxWidth: "650px",
-      }}
-    >
-      I’m always open to discussing new projects, collaborations, or ideas
-      related to software development and automation systems. You can reach me
-      through any of the following:
-    </p>
-
-    <div
-      style={{
-        lineHeight: 2,
-        color: "#bbb",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-        gap: "10px 30px",
-      }}
-    >
-      <p>
-        <FaUserTie style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>Name:</b> Sandesh Dhande
-      </p>
-      <p>
-        <FaPhoneAlt style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>Phone:</b> +91&nbsp;8698712734
-      </p>
-      <p>
-        <FaEnvelope style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>Email:</b> sandeshdhande007@gmail.com
-      </p>
-      <p>
-        <FaMapMarkerAlt style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>Location:</b> Pune, Maharashtra, India
-      </p>
-      <p>
-        <FaLinkedin style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>LinkedIn:</b>{" "}
-        <a
-          href="https://www.linkedin.com/in/sandesh-dhande-3ab180234/"
-          target="_blank"
-          rel="noopener noreferrer"
+        <h2
           style={{
             color: "#ff4081",
-            textDecoration: "none",
-            fontWeight: 500,
+            fontSize: "1.8rem",
+            fontWeight: 700,
+            marginBottom: "25px",
+            textAlign: "left",
+            maxWidth: "950px",
+            margin: "0 auto 25px auto",
+            width: "100%",
           }}
         >
-          View Profile
-        </a>
-      </p>
-      <p>
-        <FaGithub style={{ color: "#ff7b00", marginRight: "8px" }} />
-        <b>GitHub:</b>{" "}
-        <a
-          href="https://github.com/sandeshdhande27"
-          target="_blank"
-          rel="noopener noreferrer"
+          Technical Skills
+        </h2>
+
+        <div
+          style={{
+            background: "rgba(255,255,255,0.06)",
+            borderRadius: 16,
+            padding: "25px 28px",
+            margin: "0 auto",
+            maxWidth: "950px",
+            boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
+            backdropFilter: "blur(8px)",
+            transition: "all 0.3s ease",
+          }}
+        >
+          <ul
+            style={{
+              color: "#ccc",
+              lineHeight: 1.8,
+              fontSize: "1rem",
+              listStyleType: "disc",
+              paddingLeft: "22px",
+            }}
+          >
+            <li style={{ marginBottom: "15px" }}>
+              <b>Programming Languages:</b> Java, JavaScript (ES6+), TypeScript,
+              Python, SQL, Bash
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Strong command over backend logic, API development, and
+                real-time data processing.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>Frameworks & Libraries:</b> Next.js, Express.js, React,
+              Node.js, FastAPI, Flask, Material UI
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Experienced in developing high-performance full-stack web
+                applications with reusable components and modular architecture.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>Databases:</b> Microsoft SQL Server, MySQL, Redis, PostgreSQL,
+              SQLite
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Skilled in writing optimized SQL queries, designing schemas, and
+                managing caching & replication for high-volume data systems.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>DevOps & Tools:</b> Docker, Jenkins, GitHub CI/CD, PM2, Nginx,
+              Postman, VS Code
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Hands-on experience with containerization, continuous
+                integration, and automated deployment pipelines for
+                microservices and industrial apps.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>Industrial & IoT Technologies:</b> OPC-UA, Modbus (TCP/RTU),
+              MQTT, SCADA Systems, Industrial Data Logging
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Expertise in connecting industrial sensors, PLCs, and
+                controllers to cloud & local systems for real-time analytics and
+                control.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>Cloud & Hosting:</b> AWS EC2, Azure, DigitalOcean, Vercel,
+              Render
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Experience deploying and maintaining full-stack apps in cloud
+                environments with scalable architecture.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>System Design & Architecture:</b> Microservices, API Gateway,
+              Event Streaming, Message Queues
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Designed robust data pipelines for real-time machine monitoring
+                and reporting applications.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "15px" }}>
+              <b>Testing & Quality:</b> Jest, Mocha, Postman API Testing, Unit &
+              E2E Testing
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Focused on ensuring reliable, maintainable, and well-tested
+                backend services and UI flows.
+              </span>
+            </li>
+
+            <li style={{ marginBottom: "5px" }}>
+              <b>Other Core Competencies:</b> REST API Design, Real-time Data
+              Processing, System Integration, Automation Workflows, Performance
+              Tuning, Security Hardening, Reporting Automation
+              <br />
+              <span style={{ color: "#aaa", fontSize: "0.95rem" }}>
+                Adept at bridging industrial automation with modern software
+                systems to deliver smart, connected manufacturing solutions.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ✅ EDUCATION */}
+      <section
+        id="education"
+        style={{
+          padding: "60px 20px",
+          width: "100%",
+          boxSizing: "border-box",
+        }}
+      >
+        <h2
           style={{
             color: "#ff4081",
-            textDecoration: "none",
-            fontWeight: 500,
+            fontSize: "1.8rem",
+            fontWeight: 700,
+            marginBottom: "25px",
+            textAlign: "left",
+            maxWidth: "950px",
+            margin: "0 auto 25px auto",
+            width: "100%",
           }}
         >
-          Visit Repository
-        </a>
-      </p>
-    </div>
+          Education
+        </h2>
 
-    <p
-      style={{
-        marginTop: "50px",
-        color: "#888",
-        fontSize: "0.9rem",
-        borderTop: "1px solid rgba(255, 255, 255, 0.08)",
-        paddingTop: "15px",
-        textAlign: "center",
-      }}
-    >
-      © {new Date().getFullYear()} Sandesh Dhande — All Rights Reserved.
-    </p>
-  </div>
-</section>
+        <div
+          style={{
+            color: "#ccc",
+            lineHeight: 1.9,
+            fontSize: "1rem",
+            maxWidth: "950px",
+            margin: "0 auto",
+          }}
+        >
+          {/* 🎓 MCA */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              borderRadius: 16,
+              padding: "25px 28px",
+              marginBottom: "30px",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
+              backdropFilter: "blur(8px)",
+              transition: "all 0.3s ease",
+            }}
+          >
+            <h3
+              style={{
+                color: "#ff7b00",
+                marginBottom: "5px",
+                fontSize: "1.2rem",
+                fontWeight: 600,
+              }}
+            >
+              🎓 Master in Computer Applications (MCA)
+            </h3>
+            <p style={{ margin: "5px 0 15px 0", color: "#bbb" }}>
+              Sinhgad Institute of Management, Pune (Savitribai Phule Pune
+              University) — <b>2021 – 2023</b>
+            </p>
 
+            <ul style={{ paddingLeft: "20px", listStyleType: "disc" }}>
+              <li>
+                Graduated with <b>First Class with Distinction</b> — Top 5% in
+                the batch.
+              </li>
+              <li>
+                Specialized in <b>Software Engineering</b>,{" "}
+                <b>Database Management</b>, and{" "}
+                <b>Full-Stack Web Development</b>.
+              </li>
+              <li>
+                Built advanced real-time and data-driven applications
+                integrating industrial protocols and web technologies.
+              </li>
+
+              {/* 🔹 Project 1 */}
+              <li>
+                <b>Major Project 1 – Online Grain Market Platform:</b> Designed
+                and developed a full-stack web platform for farmers and traders
+                to buy, sell, and monitor grain prices in real time.
+                <ul
+                  style={{
+                    marginTop: "6px",
+                    paddingLeft: "25px",
+                    color: "#aaa",
+                  }}
+                >
+                  <li>Dynamic bidding system with live market data updates.</li>
+                  <li>Admin dashboard for product management and analytics.</li>
+                  <li>
+                    Secure user authentication and order lifecycle tracking.
+                  </li>
+                  <li>
+                    Built using <b>React, Java, MySQL, and Tailwind CSS</b>.
+                  </li>
+                </ul>
+              </li>
+
+              {/* 🔹 Project 2 */}
+              <li>
+                <b>Major Project 2 – Online News24 Portal:</b> Developed a
+                multi-user content management and news publishing system.
+                <ul
+                  style={{
+                    marginTop: "6px",
+                    paddingLeft: "25px",
+                    color: "#aaa",
+                  }}
+                >
+                  <li>
+                    Role-based admin and editor dashboards for news publishing.
+                  </li>
+                  <li>Real-time updates and category-based filtering.</li>
+                  <li>Integrated media upload and article management tools.</li>
+                  <li>
+                    Developed using <b>Python, HTML, CSS, and MySQL</b>.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          {/* 🎓 BCA */}
+          <div
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              borderRadius: 16,
+              padding: "25px 28px",
+              boxShadow: "0 6px 15px rgba(0,0,0,0.25)",
+              backdropFilter: "blur(8px)",
+              transition: "all 0.3s ease",
+            }}
+          >
+            <h3
+              style={{
+                color: "#ff7b00",
+                marginBottom: "5px",
+                fontSize: "1.2rem",
+                fontWeight: 600,
+              }}
+            >
+              🎓 Bachelor of Computer Applications (BCA)
+            </h3>
+            <p style={{ margin: "5px 0 15px 0", color: "#bbb" }}>
+              K.R.T. Arts, B.H. Commerce and A.M. Science (KTHM) College, Nashik
+              (Savitribai Phule Pune University) — <b>2018 – 2021</b>
+            </p>
+
+            <ul style={{ paddingLeft: "20px", listStyleType: "disc" }}>
+              <li>
+                Graduated with <b>Distinction</b>, specializing in programming,
+                database management, and computer networks.
+              </li>
+              <li>
+                Final Year Project:{" "}
+                <b>Real-time Industrial Control Dashboard</b> using Python and
+                Modbus for industrial data acquisition and visualization.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ✅ CONTACT / FOOTER */}
+      <section
+        id="contact"
+        style={{
+          padding: "60px 0 30px",
+          borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+          background: "linear-gradient(180deg, #0b0b0b, #111)",
+          textAlign: "left",
+        }}
+      >
+        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 20px" }}>
+          <h2
+            style={{
+              color: "#ff4081",
+              fontSize: "1.7rem",
+              fontWeight: 700,
+              marginBottom: "25px",
+              textAlign: "left",
+            }}
+          >
+            Contact Information
+          </h2>
+
+          <p
+            style={{
+              color: "#ccc",
+              lineHeight: 1.8,
+              fontSize: "1rem",
+              marginBottom: "30px",
+              maxWidth: "650px",
+            }}
+          >
+            I’m always open to discussing new projects, collaborations, or ideas
+            related to software development and automation systems. You can
+            reach me through any of the following:
+          </p>
+
+          <div
+            style={{
+              lineHeight: 2,
+              color: "#bbb",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "10px 30px",
+            }}
+          >
+            <p>
+              <FaUserTie style={{ color: "#ff7b00", marginRight: "8px" }} />
+              <b>Name:</b> Sandesh Dhande
+            </p>
+            <p>
+              <FaPhoneAlt style={{ color: "#ff7b00", marginRight: "8px" }} />
+              <b>Phone:</b> +91&nbsp;8698712734
+            </p>
+            <p>
+              <FaEnvelope style={{ color: "#ff7b00", marginRight: "8px" }} />
+              <b>Email:</b> sandeshdhande007@gmail.com
+            </p>
+            <p>
+              <FaMapMarkerAlt
+                style={{ color: "#ff7b00", marginRight: "8px" }}
+              />
+              <b>Location:</b> Pune, Maharashtra, India
+            </p>
+            <p>
+              <FaLinkedin style={{ color: "#ff7b00", marginRight: "8px" }} />
+              <b>LinkedIn:</b>{" "}
+              <a
+                href="https://www.linkedin.com/in/sandesh-dhande-3ab180234/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#ff4081",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                }}
+              >
+                View Profile
+              </a>
+            </p>
+            <p>
+              <FaGithub style={{ color: "#ff7b00", marginRight: "8px" }} />
+              <b>GitHub:</b>{" "}
+              <a
+                href="https://github.com/sandeshdhande27"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#ff4081",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                }}
+              >
+                Visit Repository
+              </a>
+            </p>
+          </div>
+
+          <p
+            style={{
+              marginTop: "50px",
+              color: "#888",
+              fontSize: "0.9rem",
+              borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+              paddingTop: "15px",
+              textAlign: "center",
+            }}
+          >
+            © {new Date().getFullYear()} Sandesh Dhande — All Rights Reserved.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
