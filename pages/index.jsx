@@ -178,35 +178,73 @@ export default function Home() {
             />
           </h2>
 
-          <p
-            style={{
-              marginBottom: "30px",
-              lineHeight: 1.8,
-              color: "#ccc",
-              fontSize: "1.05rem",
-              textAlign: "justify",
-            }}
-          >
-            I’m a passionate full-stack and industrial software engineer with
-            expertise in building
-            <span style={{ color: "#ff7b00", fontWeight: 500 }}>
-              {" "}
-              real-time data-driven systems
-            </span>
-            ,
-            <span style={{ color: "#ff7b00", fontWeight: 500 }}>
-              {" "}
-              IoT integrations
-            </span>
-            , and
-            <span style={{ color: "#ff7b00", fontWeight: 500 }}>
-              {" "}
-              modern web platforms
-            </span>
-            . I bridge the gap between automation hardware and cloud
-            technologies to deliver scalable, efficient, and reliable software
-            solutions.
-          </p>
+         <p
+  style={{
+    marginBottom: "30px",
+    lineHeight: 1.8,
+    color: "#ccc",
+    fontSize: "1.05rem",
+    textAlign: "justify",
+  }}
+>
+  Highly passionate and detail-oriented{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    Software Engineer
+  </span>{" "}
+  with proven experience in designing, developing, and deploying scalable{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    full-stack web applications
+  </span>{" "}
+  and{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    real-time industrial systems
+  </span>
+  . Proficient in{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    Java, Node.js, JavaScript, and Python
+  </span>
+  , with a strong command of{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    object-oriented design
+  </span>
+  ,{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    multithreading
+  </span>
+  , and{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    database optimization
+  </span>
+  . Experienced in leveraging{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    DevOps tools
+  </span>{" "}
+  such as GitHub, Jenkins, and Docker to implement{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    CI/CD pipelines
+  </span>{" "}
+  and automate deployment workflows. Skilled in developing{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    secure, high-performance back-end architectures
+  </span>{" "}
+  and{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    intuitive, responsive front-end interfaces
+  </span>
+  . Adept at integrating industrial protocols like{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>OPC UA</span> and{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>Modbus</span> for
+  real-time data acquisition and monitoring. Passionate about building{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    robust software solutions
+  </span>
+  , optimizing system efficiency, and driving innovation through{" "}
+  <span style={{ color: "#ff7b00", fontWeight: 500 }}>
+    modern engineering practices
+  </span>
+  .
+</p>
+
 
           {/* Skills */}
           <div
